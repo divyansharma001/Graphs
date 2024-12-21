@@ -4,8 +4,8 @@ import java.util.*;
 
 public class UsingArrayList {
     public static void main(String[] args) {
-        int r = 3;
-        int c = 3;
+        int n = 3;
+        int m = 3;
         ArrayList<ArrayList<Integer>> adj = new ArrayList<ArrayList<Integer>>();
 
         // for 1 based indexing otherwise <n
@@ -47,3 +47,5 @@ public class UsingArrayList {
         }
     }
 }
+
+// here space complexity is O(2M) here m is the number of edges
