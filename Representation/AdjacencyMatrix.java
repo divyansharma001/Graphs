@@ -35,3 +35,4 @@ public class AdjacencyMatrix {
     }
 }
 
+//here space complexity is O(NxN), here n is the number of nodes
