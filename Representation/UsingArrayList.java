@@ -15,8 +15,8 @@ public class UsingArrayList {
 
         /*
          * in general for u--v
-         * adj.get(u).get(v);
-         * adj.get(v).get(u);
+         * adj.get(u).add(v);
+         * adj.get(v).add(u);
          */
 
         // for edge 1--2
