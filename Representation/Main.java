@@ -2,7 +2,7 @@ package Representation;
 
 public class Main{
     public static void main(String[] args) {
-        //representation of graph in java
+        //representation of graph in java using adjacency matrix
         int n=3;
         int m=3;
         int adj[][] = new int[n+1][m+1];
