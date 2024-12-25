@@ -4,30 +4,30 @@ import java.util.*;
 
 public class BFS {
 
-public ArrayList<Integer> bfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj){
-ArrayList<Integer> bfs = new ArrayList<>();
-boolean[] visited = new boolean[V];
-Queue<Integer> q = new LinkedList<>();
+  public ArrayList<Integer> bfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj) {
+    ArrayList<Integer> bfs = new ArrayList<>();
+    boolean[] visited = new boolean[V];
+    Queue<Integer> q = new LinkedList<>();
 
-q.add(0);
-visited[0]=true;
+    q.add(0);
+    visited[0] = true;
 
-while(!q.isEmpty()){
-  Integer node = q.poll();
-  bfs.add(node);
+    while (!q.isEmpty()) {
+      Integer node = q.poll();
+      bfs.add(node);
 
-  for (int i = 0; i < adj.get(node).size(); i++) {
-    int it = adj.get(node).get(i);
-    if (!visited[it]) {
-        visited[it] = true;
-        q.add(it);
+      for (int i = 0; i < adj.get(node).size(); i++) {
+        int it = adj.get(node).get(i);
+        if (!visited[it]) {
+          visited[it] = true;
+          q.add(it);
+        }
+      }
+
     }
-}
 
-}
-
-return bfs;
-}
+    return bfs;
+  }
 
 }
 
@@ -50,16 +50,16 @@ return bfs;
 
 /*
  * Diffrence between .poll() and .remove() in queue in JAVA
- 1. poll()
+ * 1. poll()
  * Description: Retrieves and removes the head of the queue, or returns null if
-   the queue is empty.
+ * the queue is empty.
  * Behavior with Empty Queue: Returns null instead of throwing an exception.
  * Use Case: When you want to handle an empty queue gracefully without dealing
-   with exceptions.
- 2. remove()
+ * with exceptions.
+ * 2. remove()
  * Description: Retrieves and removes the head of the queue, but throws a
-   NoSuchElementException if the queue is empty.
+ * NoSuchElementException if the queue is empty.
  * Behavior with Empty Queue: Throws a NoSuchElementException.
  * Use Case: When you are certain the queue is not empty and want to enforce
-   stricter error handling.
+ * stricter error handling.
  */
